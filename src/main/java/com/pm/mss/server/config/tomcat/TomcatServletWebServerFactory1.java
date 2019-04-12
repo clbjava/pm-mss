@@ -31,7 +31,8 @@ import java.util.*;
 public class TomcatServletWebServerFactory1 extends TomcatServletWebServerFactory {
     private static final Charset DEFAULT_CHARSET;
     private static final Set<Class<?>> NO_CLASSES;
-    public static final String DEFAULT_PROTOCOL = "org.apache.coyote.http11.Http11Nio2Protocol";
+   // public static final String DEFAULT_PROTOCOL = "org.apache.coyote.http11.Http11Nio2Protocol1";
+    public static final String DEFAULT_PROTOCOL = "com.pm.mss.server.config.tomcat.Http11Nio2Protocol1";
     private File baseDirectory;
     private List<Valve> engineValves = new ArrayList();
     private List<Valve> contextValves = new ArrayList();
@@ -40,7 +41,7 @@ public class TomcatServletWebServerFactory1 extends TomcatServletWebServerFactor
     private List<TomcatConnectorCustomizer> tomcatConnectorCustomizers = new ArrayList();
     private List<Connector> additionalTomcatConnectors = new ArrayList();
     private ResourceLoader resourceLoader;
-    private String protocol = "org.apache.coyote.http11.Http11Nio2Protocol";
+    private String protocol = "com.pm.mss.server.config.tomcat.Http11Nio2Protocol1";
     private Set<String> tldSkipPatterns;
     private Charset uriEncoding;
     private int backgroundProcessorDelay;
@@ -51,6 +52,7 @@ public class TomcatServletWebServerFactory1 extends TomcatServletWebServerFactor
         File baseDir = this.baseDirectory != null ? this.baseDirectory : this.createTempDir("tomcat");
         tomcat.setBaseDir(baseDir.getAbsolutePath());
         Connector connector = new Connector(this.protocol);
+        connector.getProtocolHandler();
         tomcat.getService().addConnector(connector);
         this.customizeConnector(connector);
         tomcat.setConnector(connector);
