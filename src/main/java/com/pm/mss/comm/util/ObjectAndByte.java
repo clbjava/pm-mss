@@ -11,14 +11,13 @@ public class ObjectAndByte {
      */
     public static byte[] toByteArray (Object obj) {
         byte[] bytes = null;
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(bos);
-            oos.writeObject(obj);
-            oos.flush();
-            bytes = bos.toByteArray ();
-            oos.close();
-            bos.close();
+
+        try (ByteArrayOutputStream bos = new ByteArrayOutputStream();
+             ObjectOutputStream oos = new ObjectOutputStream(bos);){
+             oos.writeObject(obj);
+             oos.flush();
+             bytes = bos.toByteArray ();
+
         } catch (IOException ex) {
             ex.printStackTrace();
         }
