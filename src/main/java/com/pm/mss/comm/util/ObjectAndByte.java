@@ -16,7 +16,7 @@ public class ObjectAndByte {
              ObjectOutputStream oos = new ObjectOutputStream(bos);){
              oos.writeObject(obj);
              oos.flush();
-             bytes = bos.toByteArray ();
+            return bos.toByteArray ();
 
         } catch (IOException ex) {
             ex.printStackTrace();
