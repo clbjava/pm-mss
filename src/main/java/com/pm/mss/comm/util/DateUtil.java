@@ -11,7 +11,7 @@ import java.util.Set;
 public class DateUtil {
 
     public static void main(String[] args) {
-        String a="a";
+       /* String a="a";
         String b=a;
         a=null;
         System.out.println( b);
@@ -39,9 +39,9 @@ public class DateUtil {
             System.out.println( ObjectAndByte.toByteArray(info).length);
         } catch (Exception e) {
             e.printStackTrace();
-        }
-
-
+        }*/
+        System.out.println("中国".length());
+        System.out.println("中国".getBytes().length);
     }
 
 }

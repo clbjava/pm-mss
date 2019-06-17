@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class PmMssApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PmMssApplication.class, args);
+        PmMssSpringApplication.run(PmMssApplication.class, args);
 //        System.out.println(Thread.getAllStackTraces());
     }
 
