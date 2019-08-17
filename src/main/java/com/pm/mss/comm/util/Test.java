@@ -25,7 +25,7 @@ public class Test {
 
 
     public static void main(String[] args) {
-        int i = countWays(3);
-        System.out.print(i);
+        //int i = countWays(3);
+        System.out.print(8<<1);
     }
 }

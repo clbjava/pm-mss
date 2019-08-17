@@ -30,6 +30,6 @@ public class PmMssSpringApplication extends SpringApplication {
     @Override
     protected void afterRefresh(ConfigurableApplicationContext context, ApplicationArguments args) {
         LOG.info("afterRefresh:{}","ffffff");
-        context.publishEvent(null);
+       // context.publishEvent(null);
     }
 }

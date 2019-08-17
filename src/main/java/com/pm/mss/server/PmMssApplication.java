@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
-@ComponentScan(basePackages= {"com.pm.mss"},lazyInit=false)
+@SpringBootApplication(
+        scanBasePackages={"com.pm.mss"})
 public class PmMssApplication {
 
     public static void main(String[] args) {

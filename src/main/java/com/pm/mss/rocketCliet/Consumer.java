@@ -10,6 +10,7 @@ import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageExt;
+import org.apache.rocketmq.common.protocol.heartbeat.MessageModel;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 
@@ -25,6 +26,8 @@ public class Consumer {
 
         // Specify name server addresses.
         consumer.setNamesrvAddr("localhost:9876");
+
+
 
         // Subscribe one more more topics to consume.
         consumer.subscribe("TopicTest", "*");
@@ -60,7 +63,7 @@ public class Consumer {
                 DefaultMQProducer("please_rename_unique_group_name");
         // Specify name server addresses.
         producer.setNamesrvAddr("localhost:9876");
-        producer.setInstanceName("aaaaa");
+        //producer.setInstanceName("aaaaa");
         //Launch the instance.
         producer.start();
         for (int i = 0; i < 100; i++) {
