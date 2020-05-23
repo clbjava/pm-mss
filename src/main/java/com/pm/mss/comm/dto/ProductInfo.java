@@ -1,16 +1,13 @@
 package com.pm.mss.comm.dto;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class ProductInfo implements Serializable {
-
+public class ProductInfo {
     private Integer id;
 
     private String productId;
 
     private String productName;
-
 
     private String productType;
 
@@ -23,7 +20,6 @@ public class ProductInfo implements Serializable {
     private Date createTime;
 
     private Date updateTime;
-
 
     public Integer getId() {
         return id;
@@ -38,7 +34,7 @@ public class ProductInfo implements Serializable {
     }
 
     public void setProductId(String productId) {
-        this.productId = productId;
+        this.productId = productId == null ? null : productId.trim();
     }
 
     public String getProductName() {
@@ -46,7 +42,7 @@ public class ProductInfo implements Serializable {
     }
 
     public void setProductName(String productName) {
-        this.productName = productName;
+        this.productName = productName == null ? null : productName.trim();
     }
 
     public String getProductType() {
@@ -54,7 +50,7 @@ public class ProductInfo implements Serializable {
     }
 
     public void setProductType(String productType) {
-        this.productType = productType;
+        this.productType = productType == null ? null : productType.trim();
     }
 
     public Integer getProductNum() {
@@ -78,7 +74,7 @@ public class ProductInfo implements Serializable {
     }
 
     public void setProductDesc(String productDesc) {
-        this.productDesc = productDesc;
+        this.productDesc = productDesc == null ? null : productDesc.trim();
     }
 
     public Date getCreateTime() {
@@ -96,5 +92,4 @@ public class ProductInfo implements Serializable {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
-
 }

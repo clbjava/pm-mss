@@ -14,7 +14,6 @@ public class Test {
 
     @RequestMapping(value = "/hello",method= RequestMethod.GET)
     public String hello(HttpServletRequest req, HttpServletResponse rsp){
-        String s =new String();
         return "hello world";
     }
 }
